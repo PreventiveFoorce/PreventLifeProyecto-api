@@ -1,0 +1,62 @@
+<div class="row">
+  <div class="col-md-offset-3 mx-auto">
+    <form
+      (ngSubmit)="save()"
+      autocomplete="off"
+      [formGroup]="form"
+      #frmOrganizacion="ngForm"
+    >
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Nombre Organización</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Nombre Organización"
+          formControlName="nombreOrganizacion"
+          [disabled]="disabled"
+        />
+        <mat-error *ngIf="form.controls.nombreOrganizacion.hasError('required')">
+          Este campo es obligatorio
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Descripción Organización</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Descripción Organización"
+          formControlName="descripcionOrganizacion"
+          [disabled]="disabled"
+        />
+        <mat-error *ngIf="form.controls.descripcionOrganizacion.hasError('required')">
+          Este campo es obligatorio
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="d-block">
+        <mat-label>Saldo Recaudado</mat-label>
+        <input
+          matInput
+          type="number"
+          placeholder="Saldo Recaudado"
+          formControlName="saldoRecaudado"
+          [disabled]="true"
+          value="0"
+        />
+      </mat-form-field>
+
+      <button mat-button (click)="cancelar()">Cancelar</button>
+
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        class="ms-2"
+        [disabled]="form.invalid"
+      >
+        Guardar
+      </button>
+    </form>
+  </div>
+</div>

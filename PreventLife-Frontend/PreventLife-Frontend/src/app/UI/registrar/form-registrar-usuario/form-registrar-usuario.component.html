@@ -1,0 +1,42 @@
+<form (ngSubmit)="registrar()" autocomplete="off" [formGroup]="form" class="register-form">
+  <section class="register-box">
+    <h1 class="cuenta mat-h1">Registrate en PreventLife</h1>
+    <p class="informacion">Ingresa tus datos por favor</p>
+    <mat-form-field appearance="outline">
+      <mat-label>Correo Electrónico</mat-label>
+      <input matInput type="email" formControlName="correoUsuario" placeholder="Correo Electrónico">
+      <mat-error *ngIf="form.controls['correoUsuario'].hasError('email')">Debe ingresar un correo.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre de Usuario</mat-label>
+      <input matInput type="text" formControlName="nombreUsuario" placeholder="Nombre de Usuario">
+      <mat-error *ngIf="form.controls['nombreUsuario'].hasError('minlength')">El nombre de usuario debe tener al menos 3 caracteres.</mat-error>
+      <mat-error *ngIf="form.controls['nombreUsuario'].hasError('maxlength')">El nombre de usuario debe tener menos de 100 caracteres.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Dirección</mat-label>
+      <input matInput type="text" formControlName="direccionUsuario" placeholder="Dirección">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Contraseña</mat-label>
+      <input matInput type="password" formControlName="contrasenaUsuario" placeholder="Contraseña">
+      <mat-error *ngIf="form.controls['contrasenaUsuario'].hasError('minlength')">La contraseña debe tener al menos 6 caracteres.</mat-error>
+      <mat-error *ngIf="form.controls['contrasenaUsuario'].hasError('maxlength')">La contraseña debe tener menos de 25 caracteres.</mat-error>
+    </mat-form-field>
+
+    <p class="danger">{{ msg }}</p>
+    <div class="row">
+      <div class="col-1"></div>
+    </div>
+
+    <button mat-raised-button color="primary" type="submit">Registrarse</button>
+
+    <div class="inicio">
+      <p class="cuenta">Si ya eres cliente</p>
+      <a class="login" routerLink='/login'>Inicia Sesión</a>
+    </div>
+  </section>
+</form>

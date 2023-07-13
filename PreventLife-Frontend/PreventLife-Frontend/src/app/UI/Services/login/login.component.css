@@ -1,0 +1,72 @@
+/* Estilos generales */
+body {
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+}
+
+.login-box {
+  width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bienvenida {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.danger {
+  color: #ff0000;
+  margin-bottom: 15px;
+}
+
+.submit-button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.registro {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.registrate {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Media Query para ajustar el formulario en dispositivos móviles */
+@media (max-width: 480px) {
+  .login-box {
+    width: 100%;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,27 @@
+<div class="container1" style="margin: 7px;">
+  <h3 class="fw-bold">Lista de Organizaciones</h3>
+</div>
+
+<div class="card-container">
+  <mat-card *ngFor="let organizacion of dataSource.data" class="organizacion-card">
+    <mat-card-header>
+      <div mat-card-avatar class="card-avatar"></div>
+      <mat-card-title>{{ organizacion.nombreOrganizacion }}</mat-card-title>
+      <mat-card-subtitle>ID Organización: {{ organizacion.idOrganizacion }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="card-content">
+      <p class="descripcion-organizacion">{{ organizacion.descripcionOrganizacion }}</p>
+    </mat-card-content>
+    <mat-card-actions class="card-actions">
+      <button mat-raised-button color="primary" (click)="donar(organizacion.idOrganizacion)">
+        Donar
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+
+
+
+
+

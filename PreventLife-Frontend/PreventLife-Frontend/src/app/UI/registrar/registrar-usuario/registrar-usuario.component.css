@@ -1,0 +1,26 @@
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.col-1 {
+  flex: 1;
+}
+
+.col-2 {
+  flex: 1;
+}
+
+.info-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.beneficios {
+  width: 100%;
+}
+

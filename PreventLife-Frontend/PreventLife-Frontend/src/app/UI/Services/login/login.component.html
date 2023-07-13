@@ -1,0 +1,15 @@
+<body>
+<section class="login-box">
+  <h1 class="bienvenida">Inicia Sesión en PreventLife</h1>
+  <form #loginform="ngForm" (ngSubmit)="loginUser()">
+    <input type="email" name="correo" [(ngModel)]="usuario.correoUsuario" class="form-control" placeholder="Correo" required autofocus>
+    <input type="password" name="contrasena" [(ngModel)]="usuario.contrasenaUsuario" class="form-control" placeholder="Contraseña">
+    <p class="danger">{{msg}}</p>
+    <button type="submit" class="submit-button">Iniciar Sesión</button>
+  </form>
+  <div class="registro">
+    <a class="registrate" routerLink="../register">Regístrate aquí</a>
+    <img class="logo" src="../../assets/logo.png" alt="PreventLife">
+  </div>
+</section>
+</body>
